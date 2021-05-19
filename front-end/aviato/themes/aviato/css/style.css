@@ -40,6 +40,9 @@ a, a:focus, a:hover {
   outline: 0;
   color: #000;
 }
+.logo, .img-responsive {
+  object-fit: cover;
+}
 
 blockquote {
   font-size: 18px;

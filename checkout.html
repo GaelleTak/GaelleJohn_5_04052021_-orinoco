@@ -87,12 +87,32 @@
                             <input class="email" type="email" name="prénom" placeholder="xxxx@xxxx.xx" required/>
                     </p> 
 
+                </form>
+            </div>
+
+            <div class="panier">
+                <p class="info">Contenu de votre panier</p>
+                    <form method="post" action="traitement.php">
+                    <p class="choix">
+                        <label>Produits</label> 
+                            <input class="produit" type="text" name="produit" placeholder="Philibert" required/>
+                    <br>  
+                        <label>Quantité</label> 
+                            <input class="quantité" type="text" name="quantité" placeholder="1" required/>
+                    <br>  
+                        <label>Prix</label>
+                            <input class="prix" type="text" name="prix" placeholder="25.00 €" required/>
+
+                    <br>
+                        <label>Total de votre commande: </label>
+                            <input class="total" type="text" name="total" placeholder="25.00 €" />
+                    
                     <p>
                         <input class="valider"  type="submit" value="Valider ma commande" />
                     </p>
                 </form>
             </div>
-
+        </section>
         <!-- Footer -->
         <footer class="footer">
             <ul class="social-media">

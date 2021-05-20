@@ -48,10 +48,52 @@ a, a:focus, a:hover {
   font-size: 39px;
   color: white;
   letter-spacing: -2px;
-  margin-bottom: 35px;
-  text-align: center;
+  margin-left: 2em;
 }
 
+.slider-item {
+  text-align: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.slider-item::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: .5;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.slider-item .container {
+  position: relative;
+  display: table;
+  max-width: 1170px;
+  height: 500px;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  outline: none;
+  box-shadow: #999999 0px 0px 0px 0px;
+  box-sizing: border-box;
+  padding: 12px 26px;
+  opacity: 1;
+}
+.btn:hover{
+  color: black;
+  background-color: white;
+}
 footer
 {
   background: #F7F7F7;
@@ -62,7 +104,7 @@ footer
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-inline: 20em;
+  padding-inline: 20em;
   margin-bottom: 2em;
 }
 
@@ -177,46 +219,70 @@ object-fit: cover;
   background-color:rgb(90 46 138);
   font-weight: bold;
 }
-
-.checkout
+.qtity
 {
-  margin-top: 5em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-left: -26.5em;
+}
+#qtity{
+  margin-left: -26.5em;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.checkout{
+  margin-top: 3em;
   margin-bottom: 1em;
   margin-left: -25em;
 }
 
-input:invalid{
-    border-color: rgba(255, 0, 0, 0.493);
-}
-.person{
+.person, .choix, .total{
   font-size: 1.2em;
 }
 .info{
   font-weight: bolder;
   font-size: 1.7em;
 }
-input{
+
+.information input{
   height: 40px;
   width: 500px;
   padding-left: 1em;
+  margin-bottom: 1em;
 }
 .nom{
-  margin-left: 5em;
+  margin-left: 6em;
 }
 .prenom{
-  margin-left: 2.7em;
+  margin-left: 3.7em;
 }
 .adresse{
-  margin-left: 2.5em;
+  margin-left: 3.5em;
 }
 .code{
-  margin-left: -0.5em;
+  margin-left: 0.5em;
 }
 .ville{
-  margin-left: 5.6em;
+  margin-left: 6.6em;
 }
 .email{
-  margin-left: 4.75em;
+  margin-left: 5.75em;
+}
+.panier input{
+  height: 40px;
+  width: 200px;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.produit{
+  margin-left: 4em;
+}
+.quantité{
+  margin-left: 3.7em;
+}
+.prix{
+  margin-left: 7.5em;
 }
 .valider {
   border-color: rgb(90 46 138);
@@ -228,8 +294,10 @@ input{
   background-color:rgb(90 46 138);
   font-weight: bold;
   font-size: 1.5em;
+  width: 250px;
 }
 .valider:hover {
   text-decoration: none;
   color: #000;
 }
+

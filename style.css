@@ -42,10 +42,6 @@ a, a:focus, a:hover {
   color: #000;
 }
 
-img {
-  object-fit: cover;
-}
-
 .slider h2 {
   font-family: 'Finger Paint', cursive;
   white-space: normal;
@@ -93,6 +89,54 @@ footer
   margin-top: 50px;
   font-size: 16px;
 }
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.teddy-1-bear, .teddy-2-bear, .teddy-3-bear, .teddy-4-bear, .teddy-5-bear{
+  box-shadow: 0px 2px 5px #F2F2F2;
+  background-color: rgb(242 233 240);
+  border-color: #F2F2F2;
+  width: auto;
+  height: 400px;
+  margin-left: 1em;
+  border-radius: 0.5em;
+  margin: 2em;
+}
+
+.teddy-1-img, .teddy-2-img, .teddy-3-img, .teddy-4-img, .teddy-5-img{
+width: auto;
+height: 300px;
+border-top-left-radius: 0.5em;
+border-top-right-radius: 0.5em;
+-o-object-fit: cover;
+object-fit: cover;
+}
+
+.teddy-1-name, .teddy-2-name, .teddy-4-name, .teddy-5-name{
+  margin-left: 3em;
+  font-size: 1.75em;
+  margin-top: -0.5em;
+  font-weight:bolder
+}
+.teddy-3-name{
+  font-weight:bolder;
+  margin-left: 1.25em;
+  font-size: 1.75em;
+  margin-top: -0.5em;
+}
+
+.teddy-1-price, .teddy-2-price, .teddy-3-price, .teddy-4-price, .teddy-5-price{
+  margin-left: 5.5em;
+  font-size: 1.25em;
+  margin-top: -1.75em;
+}
+
 .navbar-toggle .icon-bar {
   background: #000;
 }

@@ -64,6 +64,34 @@
             </nav>
             <!-- Nav Section End-->
 
+            <div class="information">
+                <p class="info">Information de livraison</p>
+                    <form method="post" action="traitement.php">
+                    <p class="person">
+                        <label>Nom</label> 
+                            <input class="nom" type="text" name="nom" placeholder="Dupont" required/>
+                    <br>  
+                        <label>Prénom</label> 
+                            <input class="prenom" type="text" name="prénom" placeholder="Jean" required/>
+                    <br>  
+                        <label>Adresse</label>
+                            <input class="adresse" type="text" name="adresse" placeholder="2 place Paradis" required/>
+                    <br>  
+                        <label>Code Postal</label>
+                            <input class="code"  type="text" name="prénom" placeholder="75001" required/>
+                    <br>     
+                            <label>Ville</label> 
+                            <input class="ville" type="text" name="prénom" placeholder="Paris" required/>
+                    <br>
+                        <label>Email</label>
+                            <input class="email" type="email" name="prénom" placeholder="xxxx@xxxx.xx" required/>
+                    </p> 
+
+                    <p>
+                        <input class="valider"  type="submit" value="Valider ma commande" />
+                    </p>
+                </form>
+            </div>
 
         <!-- Footer -->
         <footer class="footer">

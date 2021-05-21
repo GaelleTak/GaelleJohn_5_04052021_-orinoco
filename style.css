@@ -125,10 +125,9 @@ footer
 
 .selection {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items:flex-start;
 }
 
 .teddy-1-bear, .teddy-2-bear, .teddy-3-bear, .teddy-4-bear, .teddy-5-bear{
@@ -273,12 +272,6 @@ object-fit: cover;
   margin-left: 5.75em;
   -webkit-margin-start: 5.2em;
 }
-.panier input{
-  height: 40px;
-  width: 200px;
-  padding-left: 1em;
-  margin-bottom: 1em;
-}
 .produit{
   margin-left: 4em;
 }
@@ -314,8 +307,12 @@ iframe {
 .menu-2{
   display: none;
 }
+.confirmation { 
+  font-size: 30px;
+  text-align: center;
+}
 
-@media only screen and (min-width: 350px) and (max-width: 650px) {
+@media only screen and (min-width: 350px) and (max-width: 655px) {
   iframe{
     width: 100%;
     height: 450px;
@@ -410,15 +407,18 @@ iframe {
   .qtity, #qtity  {
     margin-left: 0em;
   }
-  .button {
-  }
+
   .checkout{
     margin-top: 3em;
     margin-bottom: 1em;
     margin-left: 0em;
   }
+  .confirmation { 
+    font-size: 20px;
+
+  }
 }
-@media only screen and (min-width: 450px) and (max-width: 650px) {
+@media only screen and (min-width: 450px) and (max-width: 655px) {
   .selection{
     display: grid;
     position: relative;

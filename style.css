@@ -29,7 +29,6 @@ header{
   align-content: center;
   font-size: 1.5em;
   background-color: rgb(242 233 240);
-
 }
 
 ol, ul {
@@ -41,7 +40,6 @@ ol, ul {
 a, a:focus, a:hover {
   text-decoration: none;
   color: #000;
-  margin-left: auto;
 }
 
 .slider h2 {
@@ -115,29 +113,25 @@ footer
   font-size: 16px;
 }
 
-.selection {
+#produits{
 display: flex;
+flex-direction: row;
+justify-content: center;
 flex-wrap: wrap;
-margin-right: 2em;
+padding: 2em;
 }
 
-.teddy-1-bear, .teddy-2-bear, .teddy-3-bear, .teddy-4-bear, .teddy-5-bear{
+.teddy-1{
   box-shadow: 0px 2px 5px #F2F2F2;
   background-color: rgb(242 233 240);
   border-color: #F2F2F2;
   width: 300px;
-  height: 400px;
+  height: 450px;
   border-radius: 0.5em;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin: 3em;
 }
 
-.teddy-1-bear:hover, .teddy-2-bear:hover, .teddy-3-bear:hover, .teddy-4-bear:hover, .teddy-5-bear:hover{
-  background-color:rgb(90 46 138);
-  color: white;
-}
-
-.teddy-1-img, .teddy-2-img, .teddy-3-img, .teddy-4-img, .teddy-5-img{
+.teddy-1-img{
 width: auto;
 height: 300px;
 border-top-left-radius: 0.5em;
@@ -146,23 +140,29 @@ border-top-right-radius: 0.5em;
 object-fit: cover;
 }
 
-.teddy-1-name, .teddy-2-name, .teddy-4-name, .teddy-5-name{
-  margin-left: 3em;
-  font-size: 1.75em;
+.teddy-1-name{
+  font-size: 1.25em;
   margin-top: -0.5em;
-  font-weight:bolder
-}
-.teddy-3-name{
   font-weight:bolder;
-  margin-left: 1.25em;
-  font-size: 1.75em;
-  margin-top: -0.5em;
+  text-align: center;
 }
 
-.teddy-1-price, .teddy-2-price, .teddy-3-price, .teddy-4-price, .teddy-5-price{
-  margin-left: 5.5em;
+.teddy-1-price{
   font-size: 1.25em;
-  margin-top: -1.75em;
+  margin-top: -1em;
+  text-align: center;
+}
+
+.button-voir {
+  border-color: rgb(90 46 138);
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 12px 26px;
+  background-color:rgb(90 46 138);
+  font-weight: bold;
+  margin-left: 2em;
+  margin-bottom: 1em;
 }
 
 .detail{
@@ -303,7 +303,7 @@ iframe {
   text-align: center;
 }
 
-@media only screen and (min-width: 350px) and (max-width: 655px) {
+@media only screen and (min-width: 320px) and (max-width: 655px) {
   iframe{
     width: 100%;
     height: 450px;
@@ -377,7 +377,7 @@ iframe {
     margin-left: 0.5em;
   }
   .oridoudou{
-    font-size: 3.5em;
+    font-size: 3.3em;
   }
   .copyright-text{
     font-size: 12px;
@@ -415,11 +415,7 @@ iframe {
 }
 
 @media only screen and (min-width: 350px) and (max-width: 450px) {
-  .selection{
-    display: grid;
-    position: relative;
-    margin-left: 10%;
-  }
+
    .information input{
     width: 200px;
   }

@@ -23,7 +23,7 @@
     cloneElt.getElementById("blog__title").textContent = teddy.name
     cloneElt.getElementById("blog__price").textContent = teddy.price / 100 + (' €')
   
-    cloneElt.getElementById("blog__lien").href = "produit.html?id=" + teddy._id
+    cloneElt.getElementById("blog__lien").href = "detail.html?id=" + teddy._id
   
     document.getElementById("produits").appendChild(cloneElt)
   }

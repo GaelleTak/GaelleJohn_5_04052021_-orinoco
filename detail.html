@@ -79,52 +79,44 @@
 
             <!-- Detail Section Start -->
 
-            <div class="detail">
-                <img class="teddy-img" src="images/teddy_1.jpg" alt="philibert">
-                <div class="description">
-                    <p class="teddy-name">Philibert</p>
-					<p class="teddy-price">25.00 €</p>
-					<div class="teddy-description">
-                    <p>
-						Oridoudou vous propose cet ours en peluche ultra doux de 100 cm qui fera plaisir à coups sûrs ! <br> 
-                        Ses poils bruns sont doux et brillant lui donne un côté attachant
-					</p>
-					<p>
-						<span>Matière:</span> <br> 
-                        100% polyester
-					</p>
-					<p>
-                        <span>Dimensions:</span><br> 
-                        Hauteur de l'ours en peluche 100 cm <br> 
-                        Longueur 100 cm en diagonale <br>  
-                        Longueur d'un bras à l'autre 85 cm <br> 
-                        Le produit est conforme aux normes en vigueur : CE et EN71. <br> 
-                        Dès 3 ans.
-					</p>
+            <main class="main" id="main">
+                <div class="container" id="container-achat">
+                   <div class="row d-flex justify-content-center d-wrap" id="row-achat">
+                      <div class="col-md-4 mx-md-n3 mt-md-5 mt-3 mr-md-1">
+                         <div class="card mb-4 mb-lg-0 border-primary shadow-lg rounded">
+                            <div class="card-body">
+                               <img id="blog__image" src="/" class="img-fluid rounded mx-auto d-block" alt="table"/>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="col-md-4 mx-md-n3 mt-md-5 mt-n4 mr-md-1 d-md-none d-md-block" id="col-achat">
+                         <div class="card mb-4 mb-lg-0 border-primary shadow-lg rounded">
+                            <div class="card-body">
+                               <p><span class="h3 mt-3" id="blog__title"></span></p>
+                               <p><span class="p text-justify" id="blog__description"></span></p>
+                               <span class="h4" id="blog__price"></span>
+                               <form id="form">
+                                  <div class="justify-content-md-between">
+                                     <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                           <span>
+                                           <input placeholder="Quantité" required type="number" value="1" min="1" max="100"
+                                              class="form-control w-75 mt-md-3 quantity" id="quantity" /> Quantité
+                                           </span>
+                                           <button type="submit" class="btn btn-wood btn-md mt-md-3" id="buttonAdd">
+                                           <i class="fas fa-shopping-basket"></i>
+                                           <span class="p ml-1" id="meubleRedirect">Ajouter au panier</span>
+                                           </button>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </form>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
                 </div>
-
-                <form method="post" action="traitement.php">
-                    <p>
-                        <label class="qtity">Quantité</label><br />
-                        <select name="qtity" id="qtity">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                        </select>
-                    </p>
-                 </form>
-
-                <div class="checkout">
-                    <a href="checkout.html" class="button">Ajouter au panier</a>
-                </div>
-
-                </div>
-            </div>
+            </main>
 
             <!-- Detail Section End -->
 
@@ -160,5 +152,8 @@
                 
         </footer>
         <!-- Footer End -->
+
+         <!-- Fichier Javascript -->
+         <script src="js/detail.js"></script>
 
     </body>

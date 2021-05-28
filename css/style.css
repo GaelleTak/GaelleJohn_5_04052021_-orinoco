@@ -6,10 +6,6 @@ body {
   background: #F7F7F7;
 }
 
-p {
-  font-size: 10px;
-}
-
 .logo{
   margin: 3em;
 }
@@ -164,37 +160,68 @@ object-fit: cover;
   margin-left: 2em;
   margin-bottom: 1em;
 }
-
 .detail{
-  display: flex;
-  flex-direction: row;
+  margin-top: -27em;
+  margin-bottom: 3em;
+  margin-left: 28em;
 }
 
-.teddy-img{
+.teddy-image{
   width: auto;
-  height: 370px;
+  height: 400px;
   box-shadow: 0px 2px 5px #F2F2F2;
-  border-radius: 0.5em;
+  border-radius: 2em;
+  margin-left: 2em;
+  margin-top: 2em;
 }
 .teddy-name{
   font-weight:bolder;
-  font-size: 1.25em;
+  font-size: 2.5em;
   margin-top: 1em;
 }
 
 .teddy-price{
   font-weight:bolder;
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.teddy-description{
+  font-size: 2em;
+  overflow-wrap: break-word;
+  width: 400px;
+  font-size: 20px;
+}
+#form
+{
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+#quantity{
+  padding: 10px;
   font-size: 1em;
-  margin-top: -2em;
 }
 
-.teddy-description p{
-  font-size: 0.75em;
+.button-panier {
+  border-color: rgb(90 46 138);
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 15px 45px;
+  background-color: rgb(90 46 138);
+  font-weight: bold;
+  margin-left: 28em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  margin-top: -100em;
+}
+body {
+  line-height: 2;
+  font-family: 'Raleway', sans-serif;
+  color: black;
 }
 
-.teddy-description span{
-  text-decoration: underline;
-}
 
 .description{
   margin-left: 2em;
@@ -294,7 +321,6 @@ iframe {
   width: 640px;
   height: 450px;
 }
-
 .menu-2{
   display: none;
 }

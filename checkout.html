@@ -75,53 +75,79 @@
                     </ul>
                 </div>
             </nav>
+        </section>
             <!-- Nav Section End-->
 
-            <div class="information">
-                <p class="info">Information de livraison</p>
-                    <form method="post" action="validation.html">
-                        <p class="person">
-                            <label>Nom</label> 
-                                <input class="nom" type="text" name="nom" placeholder="Dupont" required/>
-                        <br>  
-                            <label>Prénom</label> 
-                                <input class="prenom" type="text" name="prénom" placeholder="Jean" required/>
-                        <br>  
-                            <label>Adresse</label>
-                                <input class="adresse" type="text" name="adresse" placeholder="2 place Paradis" required/>
-                        <br>  
-                            <label>Code Postal</label>
-                                <input class="code"  type="text" name="prénom" placeholder="75001" required/>
-                        <br>     
-                                <label>Ville</label> 
-                                <input class="ville" type="text" name="prénom" placeholder="Paris" required/>
-                        <br>
-                            <label>Email</label>
-                                <input class="email" type="email" name="prénom" placeholder="xxxx@xxxx.xx" required/>
-                        </p> 
-
-                        <p class="info">Contenu de votre panier</p>
-                        
-                        <p class="choix">
-                            <label>Produits</label> 
-                                <input class="produit" type="text" name="produit" placeholder="Philibert" />
-                        <br>  
-                            <label>Quantité</label> 
-                                <input class="quantité" type="text" name="quantité" placeholder="1" />
-                        <br>  
-                            <label>Prix</label>
-                                <input class="prix" type="text" name="prix" placeholder="25.00 €" />
-
-                        <br>
-                            <label>Total de votre commande: </label>
-                                <input class="total" type="text" name="total" placeholder="25.00 €" />
+        <main class="main" id="main">
+            <section class="container" id="container">
+                <h1 class="text-center"> Vos achats</h1>
+                
+                <div class="summary">
+                    <p class="">Nom</p>
+                    <p class="">Quantité</p>
+                    <p class="">Prix</p>
+                    <p class="">Modifier</p>
+                </div>
+                    
+                <div class="productsAddCenter" id="productsAddCenter">
+                    <template class="templateAdd">
+                        <article>
+                            <span id="blog__title" class="blog__title" ></span>
+                            <span id="blog__quantity" class="blog__quantity" ></span>
+                            <span id="price__blog" class="price__blog" ></span>
                             
-                        <p>
-                            <input class="valider"  type="submit" value="Valider ma commande" />
-                        </p>
+                            <button type="button" id="danger-btn-first" class="button-effacer">
+                                <span class="effacer">Effacer</span>
+                            </button>
+                        </article>
+                    </template>
+                </div>
+
+                    <!--l'emplacement originel de la balise Total prix qui fonctionne-->
+                <div id="col__achat" class="col__achat" >
+                    <strong id="titre-total" class="total-titre" >Total : </strong>
+                    <strong id="prix__total" class="total-prix"> 0€</strong>
+                </div>
+            
+                <form class="was-validated" id="myForm" method="POST" action="validation.html">
+                    <fieldset>
+                        <legend class="text-center">Entrez vos coordonnées</legend>
+
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input type="text" class="label" id="name" placeholder="Entrez votre nom" name="name" pattern="[A-Za-z]{1,32}" required>
+                        </div>
+                            
+                        <div class="form-group">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" class="label" id="prenom" placeholder="Entrez votre prénom" name="prénom" pattern="[A-Za-z]{1,32}"  required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="adresse">Adresse:</label>
+                            <input type="text" class="label" id="adresse" placeholder="Entrez votre adresse" name="adresse" pattern="[A-Za-z0-9'\.\-\s\,]" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ville">Ville:</label>
+                            <input type="text" class="label" id="ville" placeholder="Entrez votre ville" name="ville" pattern="[A-Za-z0-9'\.\-\s\,]" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="code">Code:</label>
+                            <input type="text" class="label" id="code" placeholder="Entrez votre code postal" name="code" pattern="[A-Za-z0-9'\.\-\s\,]" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="label" id="email" placeholder="Entrez votre adresse email" name="email" required>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" href="validation.html" class="button-valider">Valider la commande</button>   
                 </form>
-            </div>
-        </section>
+            </section>
+        </main>
         <!-- Footer -->
         <footer class="footer">
             <ul class="social-media">
@@ -152,5 +178,8 @@
                 
         </footer>
         <!-- Footer End -->
+
+        <!-- Fichier Javascript -->
+        <script src="js/checkout.js"></script>
 
     </body>

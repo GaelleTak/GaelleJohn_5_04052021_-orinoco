@@ -214,91 +214,68 @@ object-fit: cover;
   margin-bottom: 1em;
   font-size: 1em;
 }
-body {
-  line-height: 2;
-  font-family: 'Raleway', sans-serif;
-  color: black;
-}
 
-.button {
+
+.button-valider {
   border-color: rgb(90 46 138);
   color: white;
   border-style: solid;
   border-width: 2px;
-  padding: 12px 26px;
-  background-color:rgb(90 46 138);
+  padding: 18px 36px;
+  background-color: rgb(90 46 138);
   font-weight: bold;
+  font-size: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
-.checkout{
-  margin-top: 3em;
-  margin-bottom: 1em;
-  margin-left: -25em;
-}
-
-.person, .choix, .total{
-  font-size: 1.2em;
-}
-.info{
-  font-weight: bolder;
-  font-size: 1.7em;
-}
-.information input{
-  height: 40px;
-  width: 400px;
-  padding-left: 1em;
-  margin-bottom: 1em;
-}
-.nom{
-  margin-left: 6em;
-  -webkit-margin-start: 5.7em;
-}
-.prenom{
-  margin-left: 3.7em;
-  -webkit-margin-start: 3.7em;
-}
-.adresse{
-  margin-left: 3.5em;
-}
-.code{
-  margin-left: 0.5em;
-  -webkit-margin-start: 1em;
-}
-.ville{
-  margin-left: 6.6em;
-  -webkit-margin-start: 6em;
-}
-.email{
-  margin-left: 5.75em;
-  -webkit-margin-start: 5.2em;
-}
-.produit{
-  margin-left: 4em;
-}
-.quantité{
-  margin-left: 3.7em;
-}
-.prix{
-  margin-left: 7.5em;
-  -webkit-margin-start: 6.8em;
-}
-.valider {
-  border-color: rgb(90 46 138);
-  color: white;
-  border-style: solid;
-  border-width: 2px;
-  padding: 20px 26px;
-  padding-bottom: 35px;
-  background-color:rgb(90 46 138);
+.text-center, .legend{
   font-weight: bold;
   font-size: 1.5em;
-  width: 200px;
+  text-transform: uppercase;
+  margin-top: 2em;
 }
-.valider:hover {
-  text-decoration: none;
-  color: #000;
+.summary, article{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 3em;
 }
 
+.summary p{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.button-panier {
+  border-color: rgb(90 46 138);
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 15px 45px;
+  background-color: rgb(90 46 138);
+  font-weight: bold;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+.button-effacer {
+  border-color: rgb(90 46 138);
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px 10px;
+  background-color: rgb(90 46 138);
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
 iframe {
   width: 640px;
   height: 450px;
@@ -309,6 +286,10 @@ iframe {
 .confirmation { 
   font-size: 30px;
   text-align: center;
+  margin-bottom: 4em;
+}
+.label{
+  padding: 20px;
 }
 @media only screen and (min-width: 656px) and (max-width: 1000px) {
   .teddy-image{
@@ -330,15 +311,8 @@ iframe {
   .teddy-description{
     font-size: 15px;
   }
-  #form
-  {
+  #form{
     margin-top: 1.5em;
-  }
-}
-
-@media only screen and (min-width: 450px) and (max-width: 655px) {
-  .information input{
-    width: 300px;
   }
 }
 
@@ -421,16 +395,8 @@ iframe {
   .copyright-text{
     font-size: 12px;
   }
-  .information input{
-    width: 300px;
-  }
+  
   .qtity, #qtity  {
-    margin-left: 0em;
-  }
-
-  .checkout{
-    margin-top: 3em;
-    margin-bottom: 1em;
     margin-left: 0em;
   }
   .confirmation { 
@@ -463,48 +429,5 @@ iframe {
     margin-left: 1em;
     margin-bottom: 2em;
     margin-top: 2em;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 450px) {
-  .information input{
-    width: 200px;
-  }
-  label{
-    font-size: 0.8em;
-  }
-  .nom{
-    margin-left: 5em;
-  }
-  .prenom{
-    margin-left: 3.2em;
-    -webkit-margin-start: 3.5em ;
-  }
-  .adresse{
-    margin-left: 3.2em;
-    -webkit-margin-start: 3.4em;
-  }
-  .code{
-    margin-left: 0.8em;
-    -webkit-margin-start: 1.3em;
-  }
-  .ville{
-    margin-left: 5.8em;
-    -webkit-margin-start: 5.4em;
-  }
-  .email{
-    margin-left: 5.1em;
-    -webkit-margin-start: 4.7em;
-  }
-  .produit{
-    margin-left: 2em;
-  }
-  .quantité{
-    margin-left: 1.7em;
-    -webkit-margin-start: 1.9em;
-  }
-  .prix{
-    margin-left: 4.7em;
-    -webkit-margin-start: 4.4em;
   }
 }

@@ -76,7 +76,7 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) { // Recuperatio
     console.log(headers)
 
     //Appeller l'URL de l'API BACK END pour puvoir l'envoyer au backend et creation de la methode post avec le headers qui accept format JSON et utilise le mode cors qui permet kles requêtes cross origin pour acceder à divers API 
-    const myRequest = new Request('http://localhost:3000/api/furniture/order', {
+    const myRequest = new Request('http://localhost:3000/api/teddies/order', {
         method: 'POST',
         redirect: 'follow',
         headers: headers,
@@ -124,7 +124,7 @@ function goToConfirmationPage(orderId) {
         confirm("Erreur, retournez à l'index ou ajoutez un produit!")
         document.location.href = "index.html"
     }else{
-        window.location.href = `${window.location.origin}/confirmation.html?ID:=${orderId}`// L'url pour aller à la page confirmation
+        window.location.href = `validation.html`// L'url pour aller à la page confirmation
     }
 }
 
@@ -266,7 +266,5 @@ function checkForm() {
     // si l'un de ces champs n'est pas bon; on montre le message d'alert plus la raison
     if (messageTest != "") {
         alert("il est necessaire de " + "\n" + messageTest)
-    }
-
-    
+    } 
 }

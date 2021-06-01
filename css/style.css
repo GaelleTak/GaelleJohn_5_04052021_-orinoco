@@ -406,10 +406,11 @@ iframe {
   }
   
   .teddy-image{
-    text-align: center;
     width: 300px;
     margin-left: 0em;
-  }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  }
   .teddy-name{
     font-size: 2em;
   }

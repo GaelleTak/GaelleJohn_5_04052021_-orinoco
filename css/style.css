@@ -235,7 +235,7 @@ object-fit: cover;
   text-transform: uppercase;
   margin-top: 2em;
 }
-.summary, article{
+.summary, .info-product{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -253,18 +253,6 @@ object-fit: cover;
   margin: 1em;
 }
 
-.button-panier {
-  border-color: rgb(90 46 138);
-  color: white;
-  border-style: solid;
-  border-width: 2px;
-  padding: 15px 45px;
-  background-color: rgb(90 46 138);
-  font-weight: bold;
-  margin-left: 2em;
-  margin-bottom: 1em;
-  font-size: 1em;
-}
 .button-effacer {
   border-color: rgb(90 46 138);
   color: white;

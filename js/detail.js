@@ -123,5 +123,5 @@ function getAjoutTeddy(teddyData) {
 }
 
 function goToRedirectionToPanier(teddyDataNname){
-    window.location.href = `${window.location.origin}/checkout.html?dernierProduitAjouter:=${teddyDataNname}`
+    window.location.href = `${window.location.origin}/checkout.html?dernierProduitAjouter:=${teddyData.name}`
 }

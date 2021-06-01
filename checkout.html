@@ -83,103 +83,120 @@
                 <h1 class="text-center"> Vos achats</h1>
                 
                 <div class="summary">
+
                     <p class="">Nom</p>
                     <p class="">Quantité</p>
                     <p class="">Prix</p>
                     <p class="">Modifier</p>
                 </div>
-                    
+
                 <div class="productsAddCenter" id="productsAddCenter">
                     <template class="templateAdd">
-                        <article>
-                            <span id="blog__title" class="blog__title" ></span>
-                            <span id="blog__quantity" class="blog__quantity" ></span>
-                            <span id="price__blog" class="price__blog" ></span>
+                        <article class="info-product">
+                            <span class="blog__title" id="blog__title"></span>
+                            <span class="blog__quantity" id="blog__quantity"></span>
+                            <span class="price__blog" id="price__blog"></span>
                             
-                            <button type="button" id="danger-btn-first" class="button-effacer">
+                            <button type="button" class="button-effacer mt-md-5 btn btn-danger btn-md danger-btn h-25 d-inline-block" id="danger-btn-first">
                                 <span class="effacer">Effacer</span>
                             </button>
-                        </article>
-                    </template>
-                </div>
-
-                    <!--l'emplacement originel de la balise Total prix qui fonctionne-->
-                <div id="col__achat" class="col__achat" >
-                    <strong id="titre-total" class="total-titre" >Total : </strong>
-                    <strong id="prix__total" class="total-prix"> 0€</strong>
-                </div>
-            
-                <form class="was-validated" id="myForm" method="POST" action="validation.html">
-                    <fieldset>
-                        <legend class="text-center">Entrez vos coordonnées</legend>
-
-                        <div class="form-group">
-                            <label for="name">Nom:</label>
-                            <input type="text" class="label" id="name" placeholder="Entrez votre nom" name="name" pattern="[A-Za-z]{1,32}" required>
-                        </div>
                             
-                        <div class="form-group">
-                            <label for="prenom">Prénom:</label>
-                            <input type="text" class="label" id="prenom" placeholder="Entrez votre prénom" name="prénom" pattern="[A-Za-z]{1,32}"  required>
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="adresse">Adresse:</label>
-                            <input type="text" class="label" id="adresse" placeholder="Entrez votre adresse" name="adresse" pattern="[A-Za-z0-9'\.\-\s\,]" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ville">Ville:</label>
-                            <input type="text" class="label" id="ville" placeholder="Entrez votre ville" name="ville" pattern="[A-Za-z0-9'\.\-\s\,]" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="code">Code:</label>
-                            <input type="text" class="label" id="code" placeholder="Entrez votre code postal" name="code" pattern="[A-Za-z0-9'\.\-\s\,]" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="label" id="email" placeholder="Entrez votre adresse email" name="email" required>
-                        </div>
-                    </fieldset>
-
-                    <button type="submit" href="validation.html" class="button-valider">Valider la commande</button>   
-                </form>
-            </section>
-        </main>
-        <!-- Footer -->
-        <footer class="footer">
-            <ul class="social-media">
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/facebook.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/instagram.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/twitter.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/pinterest.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-            </ul>
-                    
-
-            <p class="copyright-text">Copyright &copy;2021 Oridoudou by Orinoco - Tous droits réservés</p>
+                        </article>
+                  </template>
+               </div>
+            
+            <!--l'emplacement originel de la balise Total prix qui fonctionne-->
+            <div id="col__achat" class="col__achat" >
+                <strong id="titre-total" class="total-titre" >Total : </strong>
+                <strong id="prix__total" class="total-prix"> 0€</strong>
+            </div>
                 
-        </footer>
-        <!-- Footer End -->
+               
+            <form class="was-validated" id="myForm" method="POST" action="validation.html">
+				<fieldset>
+					<legend class="text-center">Entrez vos coordonnées</legend>
+					
+                    <div class="form-group">
+						<label for="name">Nom</label>
+						<input type="text" class="label" id="name" placeholder="Entrez votre nom" name="name" pattern="[A-Za-z]{1,32}" required>
+						
+                        <div class="invalid-feedback invalidNom" ></div>
+                        <div class="valid-feedback validNom"></div>
+					</div>
+				    
+                    <div class="form-group">
+						<label for="prenom">Prénom</label>
+						<input type="text" class="label" id="prenom" placeholder="Entrez votre prénom" name="prénom" pattern="[A-Za-z]{1,32}"  required>
+						
+                        <div class="invalid-feedback invalidPrenom" ></div>
+                        <div class="valid-feedback validPrenom"></div>
+					</div>
+					
+                    <div class="form-group">
+						<label for="adresse">Adresse</label>
+						<input type="text" class="label" id="adresse" placeholder="Entrez votre adresse" name="adresse" pattern="[A-Za-z0-9'\.\-\s\,]" required>
+						
+                        <div class="invalid-feedback invalidAdresse" ></div>
+                        <div class="valid-feedback validAdresse"></div>
+					</div>
+					
+                    <div class="form-group">
+						<label for="ville">Ville</label>
+						<input type="text" class="label" id="ville" placeholder="Entrez votre ville" name="ville" pattern="[A-Za-z0-9'\.\-\s\,]" required>
+						
+                        <div class="invalid-feedback invalidVille" ></div>
+                        <div class="valid-feedback validVille"></div>
+					</div>
+					
+                    <div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="label" id="email" placeholder="Entrez votre adresse email" name="email" required>
+						
+                        <div class="invalid-feedback invalidMail" ></div>
+                        <div class="valid-feedback validMail"></div>
+					</div>
+				
+                </fieldset>
+				
+                <button type="submit" class="button-valider" >Passer la commande</button>   
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-media">
+            <li>
+                <a href="index.html">
+                    <img src="images/font/facebook.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/instagram.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/twitter.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/pinterest.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+        </ul>
+                
+
+        <p class="copyright-text">Copyright &copy;2021 Oridoudou by Orinoco - Tous droits réservés</p>
+            
+    </footer>
+    <!-- Footer End -->
 
         <!-- Fichier Javascript -->
-        <script src="js/checkout.js"></script>
-
+        <script src="js/checkout.js" defer></script>
+    
     </body>
+</html>
+

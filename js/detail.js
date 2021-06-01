@@ -42,7 +42,6 @@ function ready(teddyData) {
         //let ajoutMeuble = await getAjoutMeuble(meubleData, event)
         getAjoutTeddy(teddyData)
         goToRedirectionToPanier(teddyData.name)
-        console.log(pageSuivantProduitName)
         // Une fonction pour aller à la page shopping avec le ID et le nom
     })
     //ici pour input value pour dire aux utilisateurs que l'utilisateur ne peut choisir au moins 1 produit et non negative ou autre choses que le nombre
@@ -123,5 +122,6 @@ function getAjoutTeddy(teddyData) {
 }
 
 function goToRedirectionToPanier(teddyDataNname){
-    window.location.href = `${window.location.origin}/checkout.html?dernierProduitAjouter:=${teddyData.name}`
+
+    window.location.href = `checkout.html`
 }

@@ -89,8 +89,20 @@
                     
                     <form id="form" method="post">
                         <p>
+                            <label class="quantity">Couleurs</label><br />
+                                <select class="select-style">
+                                    <option value="1">Brun</option>
+                                    <option value="2">Beige</option>
+                                    <option value="3">Noir</option>
+                                    <option value="3">Blanc</option>
+                                </select>
+                        </p>
+                    </form>
+
+                    <form id="form" method="post">
+                        <p>
                             <label class="quantity">Quantité</label><br />
-                                <select name="quantity" id="quantity">
+                                <select class="select-style"  name="quantity" id="quantity">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -103,13 +115,10 @@
                         </p>
                     </form>
                 </div>  
-
-                
                                     
-                    <button type="submit" class="button-panier" id="buttonAdd">
-                    Ajouter au panier
-                    </button>
-                </form>
+                <button type="submit" class="button-panier" id="buttonAdd">
+                Ajouter au panier
+                </button>
             </div>
 
             <!-- Detail Section End -->

@@ -267,4 +267,6 @@ function checkForm() {
     if (messageTest != "") {
         alert("il est necessaire de " + "\n" + messageTest)
     }
+
+    
 }

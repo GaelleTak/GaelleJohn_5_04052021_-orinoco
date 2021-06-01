@@ -161,7 +161,7 @@ object-fit: cover;
 }
 .detail{
   margin-top: -27em;
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   margin-left: 28em;
 }
 
@@ -197,9 +197,18 @@ object-fit: cover;
   font-weight: bold;
 }
 
-#quantity{
-  padding: 10px;
+.select-style {
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 120px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgb(242 233 240);
+  position: relative;
   font-size: 1em;
+  font-weight: bold;
+  color: rgb(90 46 138);
 }
 
 .button-panier {

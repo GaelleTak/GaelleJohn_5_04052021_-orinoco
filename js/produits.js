@@ -6,9 +6,8 @@
   })()
   
   function getTeddies() {
-    return fetch("http://localhost:3000/api/teddies")//ou xmlhttprequest ou axios
+    return fetch("http://localhost:3000/api/teddies")
         .then((responseHttp) => responseHttp.json())
-        //.then((teddies) => teddies)
         .catch((error) => {
             alert(error) + document.getElementById(`Error :(`)
         })

@@ -1,10 +1,8 @@
 (() => {
     let cliqueLocalStorageData = getCliqueLocalStorageData()
-    console.log(cliqueLocalStorageData)
     displayData(cliqueLocalStorageData)
     updateTotalPrice(cliqueLocalStorageData)
     checkForm()
-    console.log(checkForm)
 
     /* Au téléchargement de la page, le bouton va être prêt avant les autres*/
     if (document.readyState == 'loading') { 
@@ -18,7 +16,6 @@ function ready(cliqueLocalStorageData) {
     document.addEventListener("DOMContentLoaded", () => {
         /*On récupère la classe button, et utilise getElementByClassName au lieu de ById pour pouvoir l'utiliser plusieurs fois*/
         let removeCartItemButtons = document.getElementsByClassName("danger-btn") 
-        console.log(removeCartItemButtons)
         /* On boucle tous les buttons à l'intérieur de la carte, donc on peut effacer ce qui se trouve dans la carte column*/
         for (let i = 0; i < removeCartItemButtons.length; i++) { 
             let button = removeCartItemButtons[i]
@@ -32,7 +29,6 @@ function ready(cliqueLocalStorageData) {
         formId.addEventListener("submit", async (e) => {
             e.preventDefault()
             let o = await getCreateAndSendFormData(cliqueLocalStorageData)
-            console.log(o)
             checkForm()
         })
     })
@@ -66,14 +62,12 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
         },
         products : products 
     }
-    console.log(postData)
 
     /*Création du header pour pouvoir informer du content JSON et lui permettre de le lire */
     const headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/JSON'
     }
-    console.log(headers)
 
     /*Appeller l'URL de l'API BACK END pour l'envoyer au backend et création de la methode post avec le headers acceptant format JSON */
     const myRequest = new Request('http://localhost:3000/api/teddies/order', {
@@ -83,7 +77,6 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
         mode: 'cors',
         body : JSON.stringify(postData),
     })
-    console.log(myRequest)
 
     /*Creation du fetch qui va recevoir le API back end appelé requestHeader et le JSON avec la variable postData*/
     return fetch(myRequest)
@@ -93,21 +86,14 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
             if(response.ok) { 
                 return response.json()
                 .then((json) =>{
-                    console.log(json)
                     let confirmOrder = sessionStorage.setItem("order", JSON.stringify(json))
-                    console.log(confirmOrder)
                     let orderId = goToConfirmationPage(json.orderId, confirmOrder) 
-                    console.log(orderId)
                 })
             } else {
                 return Promise.reject(response.status)
             }
             /*Une fois qu'on a le JSON, on va faire un console log du JSON*/
         }).then(response => {
-            console.log(response)
-            /*Si jamais il y a un problème on catch une erreur*/
-        }).catch(err => {
-            console.error(err)
         })
 }
 
@@ -115,9 +101,7 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
 /* Cette function permet d'indiquer que si il n'y a rien dans le sessionStorage produit, on ne peut pas aller sur la page confirmation*/
 function goToConfirmationPage(orderId) {
     let recevoirSessionStorage = sessionStorage.getItem("order")//sessionStorage
-    console.log(recevoirSessionStorage)
     let parsedSessionStorage = JSON.parse(recevoirSessionStorage)
-    console.log(parsedSessionStorage)
     
     if(parsedSessionStorage.products == 0){
         confirm("Erreur, retournez à l'index ou ajoutez un produit!")
@@ -138,7 +122,6 @@ function effacerElementCart(event) {
 
 function effacerLogique(event) {
     let donneeEffacer = event.data 
-    console.log(donneeEffacer)
     let localStorageData = getCliqueLocalStorageData() 
     localStorageData.splice(donneeEffacer, 1)
     localStorage.setItem("userPanier", JSON.stringify(localStorageData))
@@ -163,11 +146,9 @@ function getCliqueLocalStorageData() {
     /* On récupère les données de localStorage */
     let panierGetStorageData = localStorage.getItem('userPanier')
 
-    console.log(panierGetStorageData)
 
     /* Verification qu'il ne soit pas vide */
     if (!panierGetStorageData) {
-        console.log("Oups, le panier est vide")
     }
 
     let parseStructTeddyJSON = JSON.parse(panierGetStorageData)
@@ -189,14 +170,10 @@ function displayData(cliqueLocalStorageData) {
 
 function checkForm() {
     const stringTest = /[a-zA-Z]/
-    console.log(stringTest)
     const numberTest = /[0-9]/
-    console.log(numberTest)
     /* Test de mail*/
     const emailTest = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/y;
-    console.log(emailTest)
     const specialCharTest = /[$-/:-?{-~!"^_`\[\]]/
-    console.log(specialCharTest)
 
     /* Message pour dire si le formulaire ne corresponds pas */
     let messageTest = []
@@ -204,7 +181,6 @@ function checkForm() {
     /* Récupération de chaque form */
     let formNom = document.getElementById("name").value.trim() 
     /* La méthode trim() permet de retirer les blancs en début et fin de chaîne*/
-    console.log(formNom)
     let formPrenom = document.getElementById("prenom").value.trim()
     let formAdresse = document.getElementById("adresse").value.trim()
     let formVille = document.getElementById("ville").value.trim()
@@ -213,21 +189,16 @@ function checkForm() {
     /* Nom valide et invalide */
     const validNom = document.querySelector(".validNom")
     const invalidNom = document.querySelector(".invalidNom")
-    console.log(validNom, invalidNom)
     /* Prénom valide et invalide */
     const validPrenom = document.querySelector(".validPrenom")
     const invalidPrenom = document.querySelector(".invalidPrenom")
-    console.log(validPrenom, invalidPrenom)
     /* Adresse valide et invalide */
     const validAdresse = document.querySelector(".validAdresse")
     const invalidAdresse = document.querySelector(".invalidAdresse")
-    console.log(validAdresse, invalidAdresse)
     /* Ville valide et invalide */
     const validVille = document.querySelector(".validVille")
     const invalidVille = document.querySelector(".invalidVille")
-    console.log(validVille, invalidVille)
     /* Email valide et invalide */
     const validMail = document.querySelector(".validMail")
     const invalidMail = document.querySelector(".invalidMail")
-    console.log(validMail, invalidMail)
 }

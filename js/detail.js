@@ -13,7 +13,7 @@
 })()
 
 function getTeddyId() {
-    /* L'extraction de l'ID pour identifier quel lien on a cliqu2 et pour afficher après le bon API */
+    /* L'extraction de l'ID pour identifier quel lien on a cliqué et pour afficher après le bon API */
     return (new URL(document.location)).searchParams.get('id')
 }
 
@@ -21,9 +21,6 @@ function getTeddyData(teddyId) {
     /* Fetch permet la récupération des données l'API pour afficher la donnée avec le bon ID*/
     return fetch(`http://localhost:3000/api/teddies/${teddyId}`)
         .then((responseHttp) => responseHttp.json())
-        .catch((Error) => {
-            alert(Error) + document.getElementById(`Error :(`)
-        })
 }
 /* Affichage de la donnée cliquée par l'utilisateur*/
 function displayTeddy(teddyData) { 
@@ -57,17 +54,15 @@ function quantityChanged(event) {
     } else if (quantity > 100) {
         quantity = 100
     }
-    console.log(quantity)
 
     input.value = quantity
      /* Une fois la quantité validée, on la réinjecte dans l'input value */
-
     return quantity
 }
 
 function getAjoutTeddy(teddyData) {
     if (localStorage.getItem("userPanier")) {
-        console.log("Administration : le panier de l'utilisateur existe dans le localStorage");
+
     } else {
         console.log("Administration : Le panier n'existe pas, il va être créer et l'envoyer dans le localStorage");
         /*Le panier est un tableau de produits*/
@@ -77,14 +72,11 @@ function getAjoutTeddy(teddyData) {
 
     /*L'utilisateur a maintenant un panier*/
     let userPanier = JSON.parse(localStorage.getItem("userPanier"))
-    console.log(userPanier)
     let panierVide = '[]'
-    console.log(panierVide)
 
     let quantityElement = document.getElementById('quantity').value 
     /*On récupère la quantité de value input*/
     let quantityElementParsed = parseInt(quantityElement)
-    console.log(quantityElementParsed)
 
     /* Toutes les données pusher dans le localStorage, sont sauvegardées ici */
     const structTeddy = 
@@ -99,7 +91,6 @@ function getAjoutTeddy(teddyData) {
     let produitFiltre = userPanier.filter(teddy => teddy.id === structTeddy.id && teddy.color === structTeddy.color)
     /* Si le localStorage est vide on n'envoie rien */
 
-    console.log(produitFiltre)
     if(!userPanier)
     {
         panierVide.push(panierVide)
@@ -121,8 +112,6 @@ function getAjoutTeddy(teddyData) {
     }
 
     localStorage.setItem("userPanier", JSON.stringify(userPanier))
-    console.log("Administration : le produit a été ajouté au panier")
-    console.log(userPanier) 
     /*L'utilisateur a maintenant un panier*/
 }
 

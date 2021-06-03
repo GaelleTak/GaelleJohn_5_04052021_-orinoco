@@ -5,15 +5,13 @@
     }
   })()
   
+  /* Appeler les données via API */
   function getTeddies() {
     return fetch("http://localhost:3000/api/teddies")
-        .then((responseHttp) => responseHttp.json())
-        .catch((error) => {
-            alert(error) + document.getElementById(`Error :(`)
-        })
-        
+        .then((responseHttp) => responseHttp.json())        
   }
   
+  /* Récupérer les informations contenues dans le tableau*/
   function displayTeddy(teddy) {
     const templateElt = document.getElementById("templateArticle")
     const cloneElt = document.importNode(templateElt.content, true)

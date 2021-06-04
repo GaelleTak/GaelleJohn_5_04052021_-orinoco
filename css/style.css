@@ -288,6 +288,26 @@ iframe {
 .label{
   padding: 20px;
 }
+
+.blog__title{
+  margin-left: -0.5em;
+  width: 60px;
+  line-height: normal;
+  text-align: center;
+}
+
+.price__blog{
+  margin-left: 3em;
+  line-height: normal;
+  text-align: center;
+}
+
+.blog__quantity{
+  margin-left: 1em;
+  line-height: normal;
+  text-align: center;
+}
+
 @media only screen and (min-width: 656px) and (max-width: 1000px) {
   .teddy-image{
     height: 300px;

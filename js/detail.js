@@ -28,7 +28,6 @@ function displayTeddy(teddyData) {
     document.getElementById('blog__title').textContent = teddyData.name
     document.getElementById('blog__description').textContent = teddyData.description
     document.getElementById('blog__price').textContent = teddyData.price / 100 + " €"
-
 }
 
 function ready(teddyData) {

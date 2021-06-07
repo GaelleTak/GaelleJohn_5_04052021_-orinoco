@@ -71,7 +71,7 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
 
     /*Appeller l'URL de l'API BACK END pour l'envoyer au backend et création de la methode post avec le headers acceptant format JSON */
     const myRequest = new Request('http://localhost:3000/api/teddies/order', {
-        method: 'POST',
+        method: 'PUT',
         redirect: 'follow',
         headers: headers,
         mode: 'cors',
@@ -202,3 +202,4 @@ function checkForm() {
     const validMail = document.querySelector(".validMail")
     const invalidMail = document.querySelector(".invalidMail")
 }
+

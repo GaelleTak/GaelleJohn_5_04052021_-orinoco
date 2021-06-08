@@ -35,7 +35,7 @@
             <h1 class="oridoudou">Oridoudou</h1>
 
         </header>
-        <!-- End Top Header Bar -->
+           <!-- End Top Header Bar -->
 
         <!-- Nav Section -->
         <section class="menu">
@@ -75,43 +75,62 @@
                     </ul>
                 </div>
             </nav>
-            <!-- Nav Section End-->
-
-            <div>
-                <p class="confirmation">Merci pour votre commande<br>
-                Elle est en cours de préparation dans nos ateliers <br>
-                A très vite !</p>
-            </div>
         </section>
-        <!-- Footer -->
-        <footer class="footer">
-            <ul class="social-media">
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/facebook.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/instagram.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/twitter.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <img src="images/font/pinterest.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
-                    </a>
-                </li>
-            </ul>
-                    
+        <!-- Nav Section End-->
 
-            <p class="copyright-text">Copyright &copy;2021 Oridoudou by Orinoco - Tous droits réservés</p>
+         <!-- Summary Section Start-->
+        <main id="main" >
+            <section class="row align-items-center text-center" id="sectionTemplate">
+            <template id="confirmTemplate">
+                <div class="container " id="container__achat">
+                <p class="confirmation">Merci de votre commande, <span id="blog__prenom"></span><p>
+                <p class="confirmation" >Montant total :<span id="blog__price"></span> </p>
+                <p class="confirmation">Votre numéro de commande : <span id="blog__order__id"></span></p>
+                <a href="index.html">
+                    <button type="button" class="button-effacer" id="return__btn">
+                    <span class="p text-white">Retour</span>
+                    </button>
+                </a>
+                </div>  
+            </template>
+            </section>
+        </main>
+        <!-- Summary Section End-->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-media">
+            <li>
+                <a href="index.html">
+                    <img src="images/font/facebook.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/instagram.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/twitter.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/font/pinterest.svg" width="30" title="Oridoudou, site de e-commerce sur la vente en ligne de peluches" alt="Logo Orinoco" >
+                </a>
+            </li>
+        </ul>
                 
-        </footer>
-        <!-- Footer End -->
 
+        <p class="copyright-text">Copyright &copy;2021 Oridoudou by Orinoco - Tous droits réservés</p>
+            
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Fichier Javascript -->
+    <script src="js/validation.js" defer></script>
+    
     </body>
+</html>

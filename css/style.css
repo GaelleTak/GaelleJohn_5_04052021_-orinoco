@@ -281,9 +281,10 @@ iframe {
   display: none;
 }
 .confirmation { 
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
+  line-height: revert;
 }
 .label{
   padding: 20px;
@@ -416,9 +417,7 @@ iframe {
   .qtity, #qtity  {
     margin-left: 0em;
   }
-  .confirmation { 
-    font-size: 20px;
-  }
+
   .detail{
     margin-top: 0em;
     margin-bottom: 0em;
@@ -430,7 +429,8 @@ iframe {
     margin-left: 0em;
     display: block;
     margin-left: auto;
-    margin-right: auto;  }
+    margin-right: auto;  
+  }
   .teddy-name{
     font-size: 2em;
   }

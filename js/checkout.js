@@ -100,7 +100,7 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
 /*On envoie le total, l'id et le nom de la personne */
 /* Cette function permet d'indiquer que si il n'y a rien dans le sessionStorage produit, on ne peut pas aller sur la page confirmation*/
 function goToConfirmationPage(orderId) {
-    let recevoirSessionStorage = sessionStorage.getItem("order")//sessionStorage
+    let recevoirSessionStorage = sessionStorage.getItem("order")
     let parsedSessionStorage = JSON.parse(recevoirSessionStorage)
     
     if(parsedSessionStorage.products == 0){

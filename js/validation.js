@@ -20,8 +20,7 @@ function getData(){
         if (!panierGetStorageData) {
         }
     
-        let parseStructTeddyJSON = JSON.parse(panierGetStorageData)
-        return parseStructTeddyJSON    
+        return JSON.parse(panierGetStorageData)
 }
 
 /* Au clic pour revenir à index.html, on efface le localStorage du panier */

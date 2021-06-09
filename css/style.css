@@ -191,8 +191,12 @@ object-fit: cover;
   width: 400px;
   font-size: 20px;
 }
-#form
-{
+#form{
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+.form{
   margin-top: 2em;
   font-weight: bold;
 }
@@ -330,6 +334,9 @@ iframe {
     font-size: 15px;
   }
   #form{
+    margin-top: 1.5em;
+  }
+  .form{
     margin-top: 1.5em;
   }
 }

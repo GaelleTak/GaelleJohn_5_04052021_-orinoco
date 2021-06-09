@@ -28,7 +28,7 @@ function ready(cliqueLocalStorageData) {
         let formId = document.getElementById("myForm")
         formId.addEventListener("submit", async (e) => {
             e.preventDefault()
-            let o = await getCreateAndSendFormData(cliqueLocalStorageData)
+            await getCreateAndSendFormData(cliqueLocalStorageData)
             checkForm()
         })
     })
@@ -151,8 +151,7 @@ function getCliqueLocalStorageData() {
     if (!panierGetStorageData) {
     }
 
-    let parseStructTeddyJSON = JSON.parse(panierGetStorageData)
-    return parseStructTeddyJSON
+    return JSON.parse(panierGetStorageData)
 }
 
 /* Cloner le produit dans le panier et l'afficher */

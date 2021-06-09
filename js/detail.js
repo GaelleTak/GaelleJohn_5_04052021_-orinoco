@@ -67,7 +67,7 @@ function getAjoutTeddy(teddyData) {
         /*Le panier est un tableau de produits*/
         let panierInit = [];
         localStorage.setItem("userPanier", JSON.stringify(panierInit));
-    };
+    }
 
     /*L'utilisateur a maintenant un panier*/
     let userPanier = JSON.parse(localStorage.getItem("userPanier"))

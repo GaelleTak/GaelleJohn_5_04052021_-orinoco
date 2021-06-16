@@ -26,28 +26,30 @@ function getData(){
 /* Au clic pour revenir à index.html, on efface le localStorage du panier */
 function ready(){
     document.addEventListener("DOMContentLoaded", () => {
-        let btn = document.getElementById("return__btn")
+        let btn = document.getElementById("accueil__btn")
         btn.addEventListener("click", () => {
             window.localStorage.removeItem('userPanier');
         })
     })
 }
 
+
+
 function getConfirmData(){
-    let recevoirSessionStorage = sessionStorage.getItem("order")
-    let parsedSessionStorage = JSON.parse(recevoirSessionStorage)
+    let recevoirLocalStorage =  localStorage.getItem("order")
+    let parsedLocalStorage = JSON.parse(recevoirLocalStorage)
 
     /* Si il n'y a rien dans la page confirmation, on se dirige vers l'index automatiquement */
-    if(!recevoirSessionStorage){
+    if(!recevoirLocalStorage){
         document.location.href = "index.html"
         alert("error")
     }else{
-        parsedSessionStorage
-        console.log(parsedSessionStorage)
-        sessionStorage.removeItem('order')
+        parsedLocalStorage
+        console.log(parsedLocalStorage)
+        localStorage.removeItem('order')
     }
 
-    return parsedSessionStorage
+    return parsedLocalStorage
 }
 
 function displayData(confirmDatas){

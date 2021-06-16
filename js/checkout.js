@@ -86,7 +86,7 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
             if(response.ok) { 
                 return response.json()
                 .then((json) =>{
-                    let confirmOrder = sessionStorage.setItem("order", JSON.stringify(json))
+                    let confirmOrder = localStorage.setItem("order", JSON.stringify(json))
                     let orderId = goToConfirmationPage(json.orderId, confirmOrder) 
                 })
             } else {
@@ -98,12 +98,12 @@ async function getCreateAndSendFormData(cliqueLocalStorageData) {
 }
 
 /*On envoie le total, l'id et le nom de la personne */
-/* Cette function permet d'indiquer que si il n'y a rien dans le sessionStorage produit, on ne peut pas aller sur la page confirmation*/
+/* Cette function permet d'indiquer que si il n'y a rien dans le localStorage produit, on ne peut pas aller sur la page confirmation*/
 function goToConfirmationPage(orderId) {
-    let recevoirSessionStorage = sessionStorage.getItem("order")
-    let parsedSessionStorage = JSON.parse(recevoirSessionStorage)
+    let recevoirLocalStorage = localStorage.getItem("order")
+    let parsedLocalStorage = JSON.parse(recevoirLocalStorage)
     
-    if(parsedSessionStorage.products == 0){
+    if(parsedLocalStorage.products == 0){
         confirm("Erreur, retournez à l'index ou ajoutez un produit!")
         document.location.href = "index.html"
     }else{

@@ -22,7 +22,7 @@
 
 	</head>
 
-    <body id="body">
+    <body id="accueil__btn">
         <!-- Start Top Header Bar -->
         <header class="header">
             <a href="index.html">
@@ -38,62 +38,63 @@
            <!-- End Top Header Bar -->
 
         <!-- Nav Section -->
-        <section class="menu">
-            <nav class="navbar">
-                <ul>
-                    <!-- Home -->
-                    <li class="dropdown ">
-                        <a href="index.html">ACCUEIL</a>
-                    </li>
+            <section class="menu">
+                <nav class="navbar">
+                    <ul>
+                        <!-- Home -->
+                        <li class="dropdown ">
+                            <a href="index.html" >ACCUEIL</a>
+                        </li>
 
-                    <!-- Produits -->
-                    <li class="dropdown ">
-                        <a href="produits.html">PRODUITS</a>
-                    </li>
+                        <!-- Produits -->
+                        <li class="dropdown ">
+                            <a href="produits.html">PRODUITS</a>
+                        </li>
 
-                    <!-- Panier -->
-                    <li class="dropdown ">
-                        <a href="checkout.html">PANIER</a>
-                    </li>
+                        <!-- Panier -->
+                        <li class="dropdown ">
+                            <a href="checkout.html">PANIER</a>
+                        </li>
 
-                    <!-- Contact -->
-                    <li class="dropdown ">
-                        <a href="contact.html">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <nav>
-                <div class="menu-2">
-                    <label for="mobile">Menu</label>
-                <input type="checkbox" id="mobile" role="button">
-                    <ul class="sous">
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="produits.html">PRODUITS</a></li>
-                        <li><a href="checkout.html">PANIER</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <!-- Contact -->
+                        <li class="dropdown ">
+                            <a href="contact.html">CONTACT</a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
-        </section>
+                </nav>
+
+                <nav>
+                    <div class="menu-2">
+                        <label for="mobile">Menu</label>
+                    <input type="checkbox" id="mobile" role="button">
+                        <ul class="sous">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="produits.html">PRODUITS</a></li>
+                            <li><a href="checkout.html">PANIER</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+        
         <!-- Nav Section End-->
 
             <!-- Summary Section Start-->
-        <section id="sectionTemplate">
-            <template id="confirmTemplate">
-                <div class="container " id="container__achat">
-                    <p class="confirmation">
-                        Merci de votre commande, <span id="blog__prenom"></span><br>
-                        Montant total : <span id="blog__price"></span><br>
-                        Votre numéro de commande : <span id="blog__order__id"></span></p>
-                    <a href="index.html">
-                        <button type="button" class="button-effacer" id="return__btn">
-                        Retour
-                        </button>
-                    </a>
-                </div>  
-            </template>
-        </section>
+            <section id="sectionTemplate">
+                <template id="confirmTemplate">
+                    <div class="container " id="container__achat">
+                        <p class="confirmation">
+                            Merci de votre commande, <span id="blog__prenom"></span><br>
+                            Montant total : <span id="blog__price"></span><br>
+                            Votre numéro de commande : <span id="blog__order__id"></span></p>
+                        <a href="index.html">
+                            <button type="button" class="button-effacer">
+                            Retour
+                            </button>
+                        </a>
+                    </div>  
+                </template>
+            </section>
         <!-- Summary Section End-->
 
 
